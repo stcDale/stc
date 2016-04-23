@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
+    表格
+    colspan 列合并
+    rowspan 行合并
+    tr  行
+    td  列
+    -->
+    <style>
+        table{
+            width: 300px;
+            height: 300px;
+            /*固定表格布局*/
+            table-layout: fixed;
+            /*方法:2：border-collapse: collapse;表格边框合并为单一边框 默认separace*/
+            /*border-spacing:列间隔，行间隔 border-spacing 单元格间距*/
+            border-spacing: 10px 5px;
+            /*水平对齐*/
+            text-align: center;
+            /*空单元格*/
+            empty-cells:hide;/*空单元格，show的时候显示，hide时候隐藏*/
+        }
+        table tr td{
+            border: 1px solid red;
+            /*垂直对齐*/
+            vertical-align: middle;
+        }
+        /*如何让表格边框为1px
+        方法1：用边框的上下左右调整
+
+        */
+        /*伪类： hover--鼠标悬停*/
+        table tr:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<table cellspacing="0">
+    <tr>
+        <th>t1</th>
+        <!--/*表头*/-->
+    </tr>
+    <tr>
+        <td colspan="7">01</td>
+        <td>02</td>
+        <td colspan="2" rowspan="3">03</td>
+    </tr><!--行-->
+    <tr>
+          <!--列-->
+        <td rowspan="4">04</td>
+        <td>05</td>
+        <td>06</td>
+        <td>07</td>
+        <td>08</td>
+        <td colspan="3">09</td>
+    </tr><!--行-->
+    <tr>
+        <td colspan="4" rowspan="2">10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+    </tr>
+    <tr>
+        <td colspan="4" rowspan="2">14</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td colspan="2">17</td>
+        <td>18</td>
+        <td>19</td>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td>21</td>
+        <td colspan="4" rowspan="2">22</td>
+        <td>23</td>
+        <td>24</td>
+        <td colspan="2" rowspan="2">25</td>
+    </tr>
+    <tr>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+
+    </tr>
+    <tr>
+        <td colspan="10">32</td>
+    </tr>
+</table>
+</body>
+</html>
